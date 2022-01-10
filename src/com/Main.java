@@ -6,10 +6,10 @@ public class Main {
     static String[] availableGames = new String[] {"Rock Paper Scissors"};
 
     public static void main(String[] args) {
-        mainMenu();
+        run();
     }
 
-    private static void mainMenu() {
+    private static void run() {
         int game = 0;
 
         System.out.println("Welcome to the console arcade!");
@@ -19,7 +19,8 @@ public class Main {
             initGame(game);
             if (game != -1) {
                 System.out.println("Game over! Press Enter to continue");
-                String x = myScanner.nextLine();
+                try {System.in.read();}
+                catch (Exception ignored) {}
                 System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
             }
         }
